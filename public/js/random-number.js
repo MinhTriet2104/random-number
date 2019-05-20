@@ -21,14 +21,11 @@ $(document).ready(function() {
 
     function setup() {
         for (var i = 1; i <= 100; i++) {
-            var x = getRandomInt(0, 1200);
-            var y = getRandomInt(0, 800);
-            var curNumberPosition = { x: x, y: y};
-            while(checkPosition(curNumberPosition) === 0) {
+            do {
                 x = getRandomInt(0, 1200);
                 y = getRandomInt(0, 800);
                 curNumberPosition = { x: x, y: y};
-            }
+            } while(checkPosition(curNumberPosition) === 0);
             position.push(curNumberPosition);
             $('#game-board').append(`<div class="number" style="left:${x}px; top:${y}px">${i}</div>`);
         }
