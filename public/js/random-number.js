@@ -22,8 +22,8 @@ $(document).ready(function() {
     function setup() {
         for (var i = 1; i <= 100; i++) {
             do {
-                x = getRandomInt(0, 1200);
-                y = getRandomInt(0, 800);
+                var x = getRandomInt(0, 1200);
+                var y = getRandomInt(0, 800);
                 curNumberPosition = { x: x, y: y};
             } while(checkPosition(curNumberPosition) === 0);
             position.push(curNumberPosition);
